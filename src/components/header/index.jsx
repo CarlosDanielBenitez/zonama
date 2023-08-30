@@ -35,7 +35,8 @@ export const NavBar = () => {
 
             {isLargeScreen ? (
                 <ul className='navList'>
-                    <li onClick={() =>navigate('/contact')} >Contact</li>
+                    <li onClick={() => navigate('/contact')} >Contact</li>
+                    <li onClick={() => navigate('/articles')} >articles</li>
                 </ul>
             ) : (
                 <Hamburger
@@ -47,10 +48,11 @@ export const NavBar = () => {
 
             {isOpen && !isLargeScreen && (
                 <ul className='navList'>
-                    <li onClick={() =>navigate('/contact')} >Contact</li>
+                    <li onClick={() => navigate('/contact')} >Contact</li>
+                    <li onClick={() => navigate('/articles')} >articles</li>
                 </ul>
             )}
-            
+
         </div>
     );
 };
