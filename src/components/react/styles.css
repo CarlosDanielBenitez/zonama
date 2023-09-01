@@ -59,10 +59,10 @@
     transition: filter 300ms;
   }
   .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em white);
   }
   .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em white);
   }
   
   @keyframes logo-spin {
@@ -88,6 +88,7 @@
   .ReaccionandoContainer{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
+
   }

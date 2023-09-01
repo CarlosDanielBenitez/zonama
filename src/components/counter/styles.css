@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Contenedor principal */
+
+.counter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.counterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: max-content;
+    max-width: 11rem;
+}
+
+/* Botones de incremento y decremento */
+.counterButton {
+  font-size: 24px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 8px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.counterButton:hover {
+  background-color: #2980b9;
+}
+
+/* Valor del contador */
+p {
+  font-size: 36px;
+  margin: 0;
+  padding: 0 5px;
+}
+
+/* Botón de decremento deshabilitado */
+.counterButton[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
