@@ -1,5 +1,5 @@
 import React from 'react'
-import { Counter } from '../counter'
+import './styles.css'
 
 export const Card = ({ nombreArticulo,
     description,
@@ -7,9 +7,11 @@ export const Card = ({ nombreArticulo,
     price,
     img,
     id,
+    onAddToCart,
     stock }) => {
     return (
-        <div key={id} className='card'>
+    
+            <div key={id} className='card'>
             <img src={img} alt={nombreArticulo} />
             <div className='cardContent'>
                 <h2 className='cardName'>{nombreArticulo}</h2>
@@ -18,9 +20,10 @@ export const Card = ({ nombreArticulo,
                 <p className='cardPrice'>Precio: ${price}</p>
                 <p className='cardStock'>Stock: ${stock}</p>
                 <div className="cardActions">
-                    <Counter />
+                    <button type="button" className='counterButton' onClick={()=> onAddToCart(id)}>+</button>
                 </div>
             </div>
         </div>
+ 
     )
 }

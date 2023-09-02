@@ -11,7 +11,6 @@ import { Card } from '../../components/card';
 const Articles = () => {
   const [productList, setProductList] = useState([]);
   const [error, setError] = useState(null);
-  //*Counter
 
 
   useEffect(() => {
@@ -34,15 +33,17 @@ const Articles = () => {
   }
 
   return (
-    <div>
+    <>
       <h1>Lista de Productos</h1>
-      <ul>
-        {productList.map(product => (
-          <Card key={product.id} {...product}/>
-        ))}
-      </ul>
-    </div>
 
+        <div className='cardFather'>
+          {productList.map(product => (
+            <Card key={product.id} {...product} />
+          ))}
+        </div>
+
+
+    </>
 
   );
 };
