@@ -1,6 +1,6 @@
 .container{
     position: relative;
-   
+  
 }
 
 .container input{
@@ -40,7 +40,7 @@
 
 .container input + label{
     position: absolute;
-    top: 24px;
+    top: 0px;
     left: 15px;
     font-size: 1rem;
     font-weight: 600;
@@ -71,7 +71,6 @@
 .container.true input + label{
     top: 0;
     opacity: 1;
-    
     
 
 }

@@ -1,60 +1,99 @@
-import React, { useEffect, useState } from 'react'
-import { Input } from '../../components/input'
-import './styles.css'
-export const ContactForm = () => {
+import React, { useEffect, useState } from 'react';
+import { Input } from '../../components/input';
+import './styles.css';
 
-  const [task, setTask] = useState('');
+export const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+
   const [active, setActive] = useState(false);
 
-  const onChange = (event) => {
+  const onChange = (event, setter) => {
     const value = event.target.value;
-    setTask(value)
-  }
+    setter(value);
+  };
 
   const onFocus = () => {
     setActive(true);
-  }
+  };
 
   const onBlur = () => {
     setActive(false);
-  }
+  };
 
   useEffect(() => {
-    console.log("Hi function useEffect mount..");
+    console.log("Componente montado...");
 
     return () => {
-      console.log("Dismount..");
-    }
-  }, [])
+      console.log("Componente desmontado...");
+    };
+  }, []);
 
-  const inputClass = `container ${active ? active : ''}`
+  const inputClass = `container ${active ? 'active' : ''}`;
 
   return (
-    <div className='contactContainer'>
+    <>
+      <div className="contactContainer">
+        <div className="input-wrapper">
+          <label htmlFor="name">Nombre</label>
+          <Input
+            placeholder="Ex: Daniel"
+            id="name"
+            required={true}
+            onChange={(e) => onChange(e, setName)}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            className={inputClass}
+            value={name}
+          />
+        </div>
 
-      <Input
-        placeholder='Add a new task'
-        id='task'
-        required={true}
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        className={inputClass}
-        name='Task'
-      />
+        <div className="input-wrapper">
+          <label htmlFor="surname">Surname</label>
+          <Input
+            placeholder="Ex: Benitez"
+            id="surname"
+            required={true}
+            onChange={(e) => onChange(e, setSurname)}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            className={inputClass}
+            value={surname}
+          />
+        </div>
 
-      <Input
-        placeholder='Add a new task'
-        id='a'
-        required={true}
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        className={inputClass}
-        name='a'
-      />
+        <div className="input-wrapper">
+          <label htmlFor="email">Email</label>
+          <Input
+            placeholder="Ex: cdanibenz@gmail.com"
+            id="email"
+            required={true}
+            onChange={(e) => onChange(e, setEmail)}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            className={inputClass}
+            value={email}
+          />
+        </div>
 
-     
-    </div>
-  )
-}
+        <div className="input-wrapper">
+          <label htmlFor="address">Address</label>
+          <Input
+            placeholder="Ex: cdanibenz@gmail.com"
+            id="address"
+            required={true}
+            onChange={(e) => onChange(e, setAddress)}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            className={inputClass}
+            value={address}
+          />
+        </div>
+      
+        
+      </div>
+    </>
+  );
+};

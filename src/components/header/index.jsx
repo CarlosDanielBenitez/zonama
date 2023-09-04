@@ -32,7 +32,6 @@ export const NavBar = () => {
     return (
         <div className='nav'>
             <Reaccionando />
-
             {isLargeScreen ? (
                 <ul className='navList'>
                     <li onClick={() => navigate('/contact')} >Contact</li>
