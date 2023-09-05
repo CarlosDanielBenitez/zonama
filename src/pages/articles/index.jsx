@@ -33,6 +33,7 @@ const Articles = () => {
   }
 
   return (
+    
     <>
 
       <h1>Lista de Productos</h1>
