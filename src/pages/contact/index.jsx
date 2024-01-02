@@ -37,7 +37,7 @@ export const ContactForm = () => {
     <>
       <div className="contactContainer">
         <div className="input-wrapper">
-          <label htmlFor="name">Nombre</label>
+          <label htmlFor="name">Name</label>
           <Input
             placeholder="Ex: Daniel"
             id="name"

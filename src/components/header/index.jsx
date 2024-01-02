@@ -36,7 +36,7 @@ export const NavBar = () => {
                 <ul className='navList'>
                     <li onClick={() => navigate('/contact')} >Contact</li>
                     <li onClick={() => navigate('/articles')} >articles</li>
-                    <li onClick={() => navigate('/services')} >Services</li>
+                    <li onClick={() => navigate('/about')} >about</li>
 
                 </ul>
             ) : (
@@ -51,7 +51,7 @@ export const NavBar = () => {
                 <ul className='navList'>
                     <li onClick={() => navigate('/contact')} >Contact</li>
                     <li onClick={() => navigate('/articles')} >articles</li>
-                    <li onClick={() => navigate('/services')} >Services</li>
+                    <li onClick={() => navigate('/about')} >about</li>
                 </ul>
             )}
 
